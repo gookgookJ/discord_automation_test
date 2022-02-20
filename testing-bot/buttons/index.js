@@ -50,13 +50,13 @@ client.on('interactionCreate', async interaction => {
 					.setLabel('과제 제출 FAQ')
 					.setStyle('LINK'),
 			);
-		// const embed = new MessageEmbed()
-		// 	.setColor('#0099ff')
-		// 	.setTitle('과제 제출 FAQ')
-		// 	.setURL('https://urclass.codestates.com/b3b091a9-ea8f-4a79-8633-60de2a7ad922?playlist=530')
-		// 	.setDescription('과제 제출과 관련한 궁금증이 있다면 클릭해주세요!');
+		const embed = new MessageEmbed()
+			.setColor('#0099ff')
+			.setTitle('과제 제출 FAQ')
+			.setURL('https://urclass.codestates.com/b3b091a9-ea8f-4a79-8633-60de2a7ad922?playlist=530')
+			.setDescription('과제 제출과 관련한 궁금증이 있다면 클릭해주세요!');
 
-		await interaction.reply({ content: 'discord.js 슬래시 명령어 테스트', ephemeral: true, components: [row, linkRow] });
+		await interaction.reply({ content: 'discord.js 슬래시 명령어 테스트', ephemeral: true, embeds: [embed], components: [row, linkRow] });
 	}
 });
 
